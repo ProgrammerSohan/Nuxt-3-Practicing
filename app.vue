@@ -6,7 +6,9 @@
   <p>{{count}}</p>
 <button @click="decrement">Decrement</button>
 </template>
-<script setup>
+<!-- 
+
+  <script setup>
 const count = ref(0);
 
 function increment(){
@@ -19,5 +21,30 @@ function decrement(){
 
 
 }
+
+</script>
+ -->
+<script>
+export default {
+  data(){
+    return {
+       count: 0,
+    };
+
+  },
+  methods: {
+    increment(){
+      this.count++;
+
+    },
+    decrement(){
+      this.count--;
+
+    },
+
+  },
+
+
+};
 
 </script>
