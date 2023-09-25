@@ -1,13 +1,13 @@
 <template>
   
-<!-- 
-    <HomeWelcome />
+
+  <HomeWelcome />
  <Counter />
- -->
 
- <home-welcome />
+<!-- 
+   <home-welcome />
 
- <counter />
+ <counter /> -->
 </template>
 
 
