@@ -1,5 +1,6 @@
 <template>
-  <HomeWelcome/>
+  
+  <HomeWelcome />
  <Counter />
 </template>
 
