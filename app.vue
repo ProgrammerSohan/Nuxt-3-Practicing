@@ -2,13 +2,13 @@
   
 
   <HomeWelcome />
- <Counter />
+<component :is="Counter" />
 
-<!-- 
-   <home-welcome />
 
- <counter /> -->
 </template>
+<script setup>
+const Counter = resolveComponent("Counter");
 
+</script>
 
  
