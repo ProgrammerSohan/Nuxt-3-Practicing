@@ -8,9 +8,10 @@
 
 </template>
 <script setup>
-const MyComponent = ref(resolveComponent("Counter"));
+const MyComponent = shallowRef(resolveComponent("Counter"));
 
 function toggle(){
+  console.log(MyComponent.value.name);
 MyComponent.value = resolveComponent("HomeWelcome");
 
 
