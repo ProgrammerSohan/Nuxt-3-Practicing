@@ -1,7 +1,5 @@
 <template>
-  <div>
-   Hello Sohan
-  </div>
+  <Welcome/>
  <Counter />
 </template>
 
