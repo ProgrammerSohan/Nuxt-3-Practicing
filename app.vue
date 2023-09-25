@@ -1,13 +1,20 @@
 <template>
   
+ <!--  <HomeWelcome /> -->
 
-  <HomeWelcome />
-<component :is="Counter" />
+<button @click="toggle">Toggle</button>
+<component :is="MyComponent" />
 
 
 </template>
 <script setup>
-const Counter = resolveComponent("Counter");
+const MyComponent = ref(resolveComponent("Counter"));
+
+function toggle(){
+MyComponent.value = resolveComponent("HomeWelcome");
+
+
+}
 
 </script>
 
