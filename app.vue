@@ -5,10 +5,10 @@
 <a href="#" @click="view('counter')">Counter</a>
 
 
-  <HomeWelcome v-if="page === 'home'" />
+  <LazyHomeWelcome v-if="page === 'home'" />
 
 
-<Counter v-if="page === 'counter'" />
+<LazyCounter v-if="page === 'counter'" />
 
 
 </template>
