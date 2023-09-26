@@ -3,16 +3,26 @@
  <!--  <HomeWelcome /> -->
 
 <button @click="toggle">Toggle</button>
-<component :is="MyComponent" />
 
+<div v-if="MyComponent === 'welcome'" >
+  <HomeWelcome />
+
+ </div>
+<Counter v-else />
+
+
+<!-- <component :is="MyComponent" /> -->
 
 </template>
 <script setup>
-const MyComponent = shallowRef(resolveComponent("Counter"));
+//const MyComponent = shallowRef(resolveComponent("Counter"));
+const MyComponent = ref("counter");
+
 
 function toggle(){
-  console.log(MyComponent.value.name);
-MyComponent.value = resolveComponent("HomeWelcome");
+ 
+//MyComponent.value = resolveComponent("HomeWelcome");
+MyComponent.value = "welcome";
 
 
 }
