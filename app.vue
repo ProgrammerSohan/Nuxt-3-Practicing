@@ -5,6 +5,8 @@
 <a href="#" @click="view('counter')">Counter</a>
 
 
+<NuxtPage />
+
   <LazyHomeWelcome v-if="page === 'home'" />
 
 
