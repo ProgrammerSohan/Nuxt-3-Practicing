@@ -1,29 +1,22 @@
 <template>
   
- <!--  <HomeWelcome /> -->
 
-<button @click="toggle">Toggle</button>
-
-<div v-if="MyComponent === 'welcome'" >
-  <HomeWelcome />
-
- </div>
-<Counter v-else />
+<a href="#" @click="view('home')">Home</a> <br>
+<a href="#" @click="view('counter')">Counter</a>
 
 
-<!-- <component :is="MyComponent" /> -->
+  <HomeWelcome v-if="page === 'home'" />
+
+
+<Counter v-if="page === 'counter'" />
+
 
 </template>
 <script setup>
-//const MyComponent = shallowRef(resolveComponent("Counter"));
-const MyComponent = ref("counter");
+const page = ref("home");
 
-
-function toggle(){
- 
-//MyComponent.value = resolveComponent("HomeWelcome");
-MyComponent.value = "welcome";
-
+function view(name){
+ page.value = name;
 
 }
 
